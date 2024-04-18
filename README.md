@@ -27,3 +27,9 @@ AZURE_OPENAI_VERSION="2024-02-15-preview"
 AZURE_OPENAI_DEPLOYMENT=""
 AZURE_OPENAI_CHAT_MODEL=""
 ```
+```
+docker build --platform linux/amd64 --tag azthailand/py-rag:0.0.1 . 
+```
+```
+az acr build --registry azthailand --image azthailand.azurecr.io/py-rag:0.0.1 .
+```

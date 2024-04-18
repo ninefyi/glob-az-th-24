@@ -93,4 +93,4 @@ with gr.Blocks(theme=Base(), title="Question Answering App using Vector Search +
 
     button.click(query_data, textbox, outputs=[output1, output2])
 
-demo.launch(share=True)
+demo.launch(share=True, server_port=7860)

@@ -1,0 +1,7 @@
+services: 
+  web:
+    platform: linux/amd64
+    build: .
+    image: azthailand/py-rag:0.0.1
+    ports:
+      - "7860:7860"
