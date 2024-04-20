@@ -6,7 +6,6 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v4
 
@@ -14,6 +13,13 @@ jobs:
         uses: azure/login@v2
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      - name: 'Create secret.py file'
+        run: |
+          touch secret.py
+          echo ${{ secrets.SECRET_KEY }} >> .env
+          cat secret.py
+        working-directory: ./src
 
       - run: | 
           az acr build --registry azthailand --image azthailand.azurecr.io/py-rag:0.0.1 .
