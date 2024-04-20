@@ -14,10 +14,16 @@ jobs:
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
-      - name: 'Create secret.py file'
+      - name: Overwrite file
+        uses: "DamianReeves/write-file-action@master"
+        with:
+          path: src/secret.py
+          write-mode: overwrite
+          contents: |
+            ${{ secrets.SECRET_KEY }}
+
+      - name: 'CAT secret.py file'
         run: |
-          touch secret.py
-          echo ${{ secrets.SECRET_KEY }} >> .env
           cat secret.py
         working-directory: ./src
 
