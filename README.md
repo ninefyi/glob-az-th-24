@@ -27,9 +27,19 @@ AZURE_OPENAI_VERSION="2024-02-15-preview"
 AZURE_OPENAI_DEPLOYMENT=""
 AZURE_OPENAI_CHAT_MODEL=""
 ```
+- Build Docker from Local.
 ```
 docker build --platform linux/amd64 --tag azthailand/py-rag:0.0.1 . 
 ```
+- Build Docker from Azure Container Registry.
 ```
 az acr build --registry azthailand --image azthailand.azurecr.io/py-rag:0.0.1 .
 ```
+- References
+1. https://github.com/ninefyi/glob-az-th-24
+2. https://www.gradio.app/docs/mount_gradio_app 
+3. https://www.mongodb.com/developer/products/atlas/gemma-mongodb-huggingface-rag 
+4. https://www.mongodb.com/developer/products/atlas/rag-atlas-vector-search-langchain-openai  
+5. https://medium.com/@dehhmesquita/deploy-a-gradio-app-on-azure-using-a-python-azure-app-service-9ea718390a89 
+6. https://learn.microsoft.com/en-us/azure/ai-services/openai/
+7. https://huggingface.co/datasets/MongoDB/embedded_movies  
