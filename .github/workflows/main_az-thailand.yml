@@ -4,7 +4,7 @@ on:
   workflow_dispatch
 
 jobs:
-  build_and_deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -13,9 +13,7 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_EF3BC13C81A84566A4344ACD47C4498F }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_69F5FC6B2EC64ECFA2E4668990DC012D }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_CDFE7274E48C43379212EE3099516723 }}
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
 
       - run: | 
           az acr build --registry azthailand --image azthailand.azurecr.io/py-rag:0.0.1 .
