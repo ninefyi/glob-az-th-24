@@ -17,7 +17,7 @@ jobs:
       - name: 'Create secret.py file'
         run: |
           touch secret.py
-          echo ${{ secrets.SECRET_KEY }} >> .env
+          echo '${{ secrets.SECRET_KEY }}' >> .env
           cat secret.py
         working-directory: ./src
 
