@@ -30,7 +30,7 @@ filetype==1.2.0
 fonttools==4.51.0
 frozenlist==1.4.1
 fsspec==2024.2.0
-gradio==4.26.0
+gradio==4.36.0
 gradio_client==0.15.1
 greenlet==3.0.3
 h11==0.14.0
