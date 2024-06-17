@@ -110,7 +110,7 @@ typing_extensions==4.11.0
 tzdata==2024.1
 unstructured==0.13.2
 unstructured-client==0.18.0
-urllib3==2.2.1
+urllib3==2.2.2
 uvicorn==0.29.0
 websockets==11.0.3
 wrapt==1.16.0
